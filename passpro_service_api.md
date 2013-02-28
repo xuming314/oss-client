@@ -32,7 +32,7 @@
 路由：/ios/member/bills/:member_id  <br/>
 类型：get  <br/>
 功能：根据会员ID获取会员消费记录  <br/>
-返回：
+返回：  <br/>
 失败
 ```json
 {
@@ -56,17 +56,41 @@
 路由：/ios/gifts/:merchant_id  <br/>
 类型：get  <br/>
 功能：根据商户ID获取商户礼品列表  <br/>
-返回：
+返回：  <br/>
 失败
+```json
+{
+  "code":"InvalidArgument",
+  "message":"gifts not found"
+}
 ```
-```
-成功
-```
+成功（返回json数组）
+```json
+[{
+  "merchantId"  : Number,
+  "giftId"      : Number,
+  "category"    : String,
+  "titleCn"     : String,
+  "titleEn"     : String,
+  "description" : String,
+  "points"      : Number,
+  "remain"      : Number
+}]
 ```
 <h2>4</h2>
 路由：/ios/activities/:merchant_id
+类型：get
+功能：
+返回：
 <h2>5</h2>
 路由：/ios/gift/infor/:gift_id
+类型：get
+功能：
+返回：
 post
 <h2>6</h2>
 路由：/ios/exchange/gifts
+类型：
+功能：
+请求：
+返回：
