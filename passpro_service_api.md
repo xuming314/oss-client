@@ -78,19 +78,19 @@
 }]
 ```
 <h2>4</h2>
-路由：/ios/activities/:merchant_id
-类型：get
-功能：
-返回：
+路由：/ios/activities/:merchant_id  <br/>
+类型：get  <br/>
+功能：  <br/>
+返回：  <br/>
 <h2>5</h2>
-路由：/ios/gift/infor/:gift_id
-类型：get
-功能：
-返回：
+路由：/ios/gift/infor/:gift_id  <br/>
+类型：get  <br/>
+功能：  <br/>
+返回：  <br/>
 post
 <h2>6</h2>
-路由：/ios/exchange/gifts
-类型：
-功能：
-请求：
-返回：
+路由：/ios/exchange/gifts  <br/>
+类型：  <br/>
+功能：  <br/>
+请求：  <br/>
+返回：  <br/>
