@@ -117,6 +117,20 @@
 功能：礼品兑换  <br/>
 请求：  <br/>
 ```json
+{
+  "merchant_id": 1,
+  "member_id": 111,
+  "gifts": [{
+    "gift_id": Number,
+    "count": Number
+  }, {
+    "gift_id": Number,
+    "count": Number
+  }, {
+    "gift_id": Number,
+    "count": Number
+  }]
+}
 ```
 返回：  <br/>
 失败
