@@ -118,8 +118,8 @@
 请求：  <br/>
 ```js
 {
-  "merchant_id": 1,
-  "member_id": 111,
+  "merchant_id": Number,
+  "member_id": Number,
   "gifts": [{
     "gift_id": Number,
     "count": Number
