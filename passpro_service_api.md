@@ -74,7 +74,9 @@
   "titleEn"     : String,
   "description" : String,
   "points"      : Number,
-  "remain"      : Number
+  "remain"      : Number,
+  "frontImage"  : String,
+  "backImage"   : String
 }]
 ```
 <h2>4</h2>
@@ -92,9 +94,20 @@
 成功（返回json数组）
 ```json
 [{
-  "merchantId"  : Number,
-  "title"       : String,
-  "description" : String
+  merchantId  : Number,
+  title       : String,
+  content     : String,
+  imgPath     : String,
+  audioPath   : String,
+  state       : String, //['valid', 'invalid']
+  activityType: String, //['优惠券', '团购券']
+  auditState  : String, //['通过', '否决', '审核中']
+  applyState  : String, //['无限制', '需申领']
+  wholeState  : String, //['全部门店', '部分门店']
+  startTime   : Date,
+  endTime     : Date,
+  createTime  : Date,
+  updateTime  : Date
 }]
 ```
 <h2>5</h2>
@@ -110,4 +123,5 @@
 ```
 成功
 ```json
+
 ```
