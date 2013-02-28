@@ -98,17 +98,6 @@
 }]
 ```
 <h2>5</h2>
-路由：/ios/merchant/:merchant_id/gift/:gift_id  <br/>
-类型：get  <br/>
-功能：根据merchant_id 和 gift_id获取某一礼品的详细信息  <br/>
-返回：  <br/>
-失败
-```json
-```
-成功
-```json
-```
-<h2>6</h2>
 路由：/ios/exchange/gifts  <br/>
 类型：post  <br/>
 功能：礼品兑换  <br/>
