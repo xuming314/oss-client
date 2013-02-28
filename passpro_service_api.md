@@ -25,7 +25,7 @@
   "point"        : Number,
   "savings"      : Number,
   "savingDueTime": Date,
-  "pushState"    : String,// ['receive', 'reject']}
+  "pushState"    : String,// ['receive', 'reject']
 }
 ```
 <h2>2</h2>
