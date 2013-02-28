@@ -123,16 +123,16 @@ success: 200; not authorized: 401; argument invalid: 409  <br/>
 请求：  <br/>
 ```js
 {
-  "merchant_id": Number,
-  "member_id": Number,
+  "merchantId": Number,
+  "memberId": Number,
   "gifts": [{
-    "gift_id": Number,
+    "giftId": Number,
     "count": Number
   }, {
-    "gift_id": Number,
+    "giftId": Number,
     "count": Number
   }, {
-    "gift_id": Number,
+    "giftId": Number,
     "count": Number
   }]
 }
