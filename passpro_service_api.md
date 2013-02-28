@@ -54,7 +54,7 @@
 }]
 ```
 <h2>3</h2>
-路由：/api/v1/ios/gifts/:merchant_id  <br/>
+路由：/api/v1/ios/merchant/gifts/:merchant_id  <br/>
 类型：get  <br/>
 功能：根据商户ID获取商户礼品列表  <br/>
 返回：  <br/>
