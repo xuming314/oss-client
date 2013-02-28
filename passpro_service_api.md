@@ -5,24 +5,27 @@
 返回：<br/>
 失败
 ```json
-{"code":"InvalidArgument","message":"member not found"}
+{
+  "code":"InvalidArgument",
+  "message":"member not found"
+}
 ```
 成功
 ```json
 {
-  memberId     : Number,
-  userId       : Number,
-  merchantId   : Number,
-  roleId       : Number,
-  petName      : String,
-  state        : String,// ['disable', 'enable', 'suspend']
-  privacy      : String,// ['notShare', 'baseShare', 'fullShare']
-  createdAt    : Date,
-  dueTime      : Date,
-  point        : Number,
-  savings      : Number,
-  savingDueTime: Date,
-  pushState    : String,// ['receive', 'reject']}
+  "memberId"     : Number,
+  "userId"       : Number,
+  "merchantId"   : Number,
+  "roleId"       : Number,
+  "petName"      : String,
+  "state"        : String,// ['disable', 'enable', 'suspend']
+  "privacy"      : String,// ['notShare', 'baseShare', 'fullShare']
+  "createdAt"    : Date,
+  "dueTime"      : Date,
+  "point"        : Number,
+  "savings"      : Number,
+  "savingDueTime": Date,
+  "pushState"    : String,// ['receive', 'reject']}
 }
 ```
 <h3>2</h3>
@@ -40,13 +43,13 @@
 成功（返回json数组）
 ```json
 [{
-  memberId : Number,
-  merchant : String,
-  billCode : String,
-  posCode  : String,
-  points   : Number,
-  balance  : String,
-  time     : Date
+  "memberId" : Number,
+  "merchant" : String,
+  "billCode" : String,
+  "posCode"  : String,
+  "points"   : Number,
+  "balance"  : String,
+  "time"     : Date
 }]
 ```
 <h3>3</h3>
