@@ -79,9 +79,7 @@ success: 200; not authorized: 401; argument invalid: 409  <br/>
   "description" : String,
   "points"      : Number,
   "remain"      : Number,
-  "images"      : [{
-    "url": String
-  }]
+  "images"      : String  //每一个路径以","开始，例：",/ios/upload/a.jpg,/ios/upload/b.png"
 }]
 ```
 <h2>4</h2>
