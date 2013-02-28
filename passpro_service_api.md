@@ -135,8 +135,15 @@
 返回：  <br/>
 失败
 ```json
+{
+  "code":"InvalidArgument",
+  "message":""
+}
 ```
 成功
 ```json
-
+{
+  "code": "success",
+  "message": "exchange finish"
+}
 ```
