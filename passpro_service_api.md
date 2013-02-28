@@ -79,8 +79,9 @@ success: 200; not authorized: 401; argument invalid: 409  <br/>
   "description" : String,
   "points"      : Number,
   "remain"      : Number,
-  "frontImage"  : String,
-  "backImage"   : String
+  "images"      : [{
+    "url": String
+  }]
 }]
 ```
 <h2>4</h2>
