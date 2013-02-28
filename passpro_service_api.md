@@ -78,19 +78,47 @@
 }]
 ```
 <h2>4</h2>
-路由：/ios/activities/:merchant_id  <br/>
+路由：/ios/merchant/activities/:merchant_id  <br/>
 类型：get  <br/>
-功能：  <br/>
+功能：根据商户ID获取商户的活动列表  <br/>
 返回：  <br/>
+失败
+```json
+{
+  "code":"InvalidArgument",
+  "message":"activities not found"
+}
+```
+成功（返回json数组）
+```json
+[{
+  "merchantId"  : Number,
+  "title"       : String,
+  "description" : String
+}]
+```
 <h2>5</h2>
-路由：/ios/gift/infor/:gift_id  <br/>
+路由：/ios/merchant/:merchant_id/gift/:gift_id  <br/>
 类型：get  <br/>
-功能：  <br/>
+功能：根据merchant_id 和 gift_id获取某一礼品的详细信息  <br/>
 返回：  <br/>
-post
+失败
+```json
+```
+成功
+```json
+```
 <h2>6</h2>
 路由：/ios/exchange/gifts  <br/>
-类型：  <br/>
-功能：  <br/>
+类型：post  <br/>
+功能：礼品兑换  <br/>
 请求：  <br/>
+```json
+```
 返回：  <br/>
+失败
+```json
+```
+成功
+```json
+```
