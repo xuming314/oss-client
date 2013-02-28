@@ -46,12 +46,12 @@ success: 200; not authorized: 401; argument invalid: 409  <br/>
 ```js
 [{
   "memberId"   : Number,
+  "merchantId" : Number,
   "billCode"   : Number,
   "paidType"   : String, //['money', 'points'],
   "posCode"    : String,
   "paidPoints" : Number,
   "paidMoney"  : Number,
-  "merchant"   : String,
   "createTime" : Date
 }]
 ```
