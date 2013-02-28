@@ -43,13 +43,14 @@
 成功（返回json数组）
 ```json
 [{
-  "memberId" : Number,
-  "merchant" : String,
-  "billCode" : String,
-  "posCode"  : String,
-  "points"   : Number,
-  "balance"  : String,
-  "time"     : Date
+  "memberId"   : Number,
+  "billCode"   : Number,
+  "paidType"   : String, //['money', 'points'],
+  "posCode"    : String,
+  "paidPoints" : Number,
+  "paidMoney"  : Number,
+  "merchant"   : String,
+  "createTime" : Date
 }]
 ```
 <h2>3</h2>
