@@ -139,6 +139,11 @@
   "code":"InvalidArgument",
   "message":""
 }
+//主要报错信息
+'gift not found'    //礼品不存在
+'gift not enough'   //礼品数量不足
+'gift count is wrong'  //客户端请求的礼品数量不正确，如：负数
+'member points not enough'    //会员积分点数不够
 ```
 成功
 ```js
