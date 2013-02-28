@@ -4,14 +4,14 @@
 功能：根据会员ID获取会员信息  <br/>
 返回：<br/>
 失败
-```json
+```js
 {
   "code":"InvalidArgument",
   "message":"profile not found"
 }
 ```
 成功
-```json
+```js
 {
   "memberId"     : Number,
   "userId"       : Number,
@@ -34,14 +34,14 @@
 功能：根据会员ID获取会员消费记录  <br/>
 返回：  <br/>
 失败
-```json
+```js
 {
   "code":"InvalidArgument",
   "message":"bills not found"
 }
 ```
 成功（返回json数组）
-```json
+```js
 [{
   "memberId"   : Number,
   "billCode"   : Number,
@@ -59,14 +59,14 @@
 功能：根据商户ID获取商户礼品列表  <br/>
 返回：  <br/>
 失败
-```json
+```js
 {
   "code":"InvalidArgument",
   "message":"gifts not found"
 }
 ```
 成功（返回json数组）
-```json
+```js
 [{
   "merchantId"  : Number,
   "giftId"      : Number,
@@ -86,14 +86,14 @@
 功能：根据商户ID获取商户的活动列表  <br/>
 返回：  <br/>
 失败
-```json
+```js
 {
   "code":"InvalidArgument",
   "message":"activities not found"
 }
 ```
 成功（返回json数组）
-```json
+```js
 [{
   merchantId  : Number,
   title       : String,
@@ -116,7 +116,7 @@
 类型：post  <br/>
 功能：礼品兑换  <br/>
 请求：  <br/>
-```json
+```js
 {
   "merchant_id": 1,
   "member_id": 111,
@@ -134,14 +134,14 @@
 ```
 返回：  <br/>
 失败
-```json
+```js
 {
   "code":"InvalidArgument",
   "message":""
 }
 ```
 成功
-```json
+```js
 {
   "code": "success",
   "message": "exchange finish"
