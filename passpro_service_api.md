@@ -3,6 +3,7 @@
 类型：get  <br/>
 功能：根据会员ID获取会员信息  <br/>
 返回：<br/>
+success: 200; not authorized: 401; argument invalid: 409  <br/>
 失败
 ```js
 {
@@ -33,6 +34,7 @@
 类型：get  <br/>
 功能：根据会员ID获取会员消费记录  <br/>
 返回：  <br/>
+success: 200; not authorized: 401; argument invalid: 409  <br/>
 失败
 ```js
 {
@@ -58,6 +60,7 @@
 类型：get  <br/>
 功能：根据商户ID获取商户礼品列表  <br/>
 返回：  <br/>
+success: 200; not authorized: 401; argument invalid: 409  <br/>
 失败
 ```js
 {
@@ -85,6 +88,7 @@
 类型：get  <br/>
 功能：根据商户ID获取商户的活动列表  <br/>
 返回：  <br/>
+success: 200; not authorized: 401; argument invalid: 409  <br/>
 失败
 ```js
 {
@@ -133,6 +137,7 @@
 }
 ```
 返回：  <br/>
+success: 200; not authorized: 401; argument invalid: 409  <br/>
 失败
 ```js
 {
