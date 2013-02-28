@@ -1,4 +1,4 @@
-<h3>1</h3>
+<h2>1</h2>
 路由：/ios/member/profile/:member_id  <br/>
 类型：get  <br/>
 功能：根据会员ID获取会员信息  <br/>
@@ -28,7 +28,7 @@
   "pushState"    : String,// ['receive', 'reject']}
 }
 ```
-<h3>2</h3>
+<h2>2</h2>
 路由：/ios/member/bills/:member_id  <br/>
 类型：get  <br/>
 功能：根据会员ID获取会员消费记录  <br/>
@@ -52,7 +52,7 @@
   "time"     : Date
 }]
 ```
-<h3>3</h3>
+<h2>3</h2>
 路由：/ios/gifts/:merchant_id  <br/>
 类型：get  <br/>
 功能：根据商户ID获取商户礼品列表  <br/>
@@ -63,10 +63,10 @@
 成功
 ```
 ```
-<h3>4</h3>
+<h2>4</h2>
 路由：/ios/activities/:merchant_id
-<h3>5</h3>
+<h2>5</h2>
 路由：/ios/gift/infor/:gift_id
 post
-<h3>1</h3>
+<h2>6</h2>
 路由：/ios/exchange/gifts
