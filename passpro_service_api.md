@@ -7,7 +7,7 @@
 ```json
 {
   "code":"InvalidArgument",
-  "message":"member not found"
+  "message":"profile not found"
 }
 ```
 成功
