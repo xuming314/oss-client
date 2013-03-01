@@ -47,7 +47,7 @@ success: 200; not authorized: 401; argument invalid: 409  <br/>
 [{
   "memberId"   : Number,
   "merchantId" : Number,
-  "billCode"   : String,
+  "billId"   : String,
   "paidType"   : String, //['money', 'points'],
   "posCode"    : String,
   "paidPoints" : Number,
