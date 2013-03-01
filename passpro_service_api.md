@@ -47,7 +47,7 @@ success: 200; not authorized: 401; argument invalid: 409  <br/>
 [{
   "memberId"   : Number,
   "merchantId" : Number,
-  "billCode"   : Number,
+  "billCode"   : String,
   "paidType"   : String, //['money', 'points'],
   "posCode"    : String,
   "paidPoints" : Number,
@@ -72,7 +72,7 @@ success: 200; not authorized: 401; argument invalid: 409  <br/>
 ```js
 [{
   "merchantId"  : Number,
-  "giftId"      : Number,
+  "giftId"      : String,
   "category"    : String,
   "titleCn"     : String,
   "titleEn"     : String,
