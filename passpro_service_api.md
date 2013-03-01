@@ -124,13 +124,13 @@ success: 200; not authorized: 401; argument invalid: 409  <br/>
   "merchantId": Number,
   "memberId": Number,
   "gifts": [{
-    "giftId": Number,
+    "giftId": String,
     "count": Number
   }, {
-    "giftId": Number,
+    "giftId": String,
     "count": Number
   }, {
-    "giftId": Number,
+    "giftId": String,
     "count": Number
   }]
 }
