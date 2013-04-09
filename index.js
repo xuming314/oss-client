@@ -14,11 +14,12 @@ DPDutil.events = ['get', 'post'];
 DPDutil.prototype.clientGeneration = true;
 DPDutil.prototype.handle = function (context, next) {
   var request = context.req;
-  if (request.method === 'GET') {
+  if (request.internal && (request.method === 'GET')) {
     context.done();
   }
-  if (request.internal && request.method === "POST") {
+  if (request.internal && (request.method === "POST")) {
     var body = request.body;
+    context.done(null, result);
   }
 }
 
