@@ -1,0 +1,22 @@
+{
+  "name": "oss-client",
+  "version": "0.0.0",
+  "description": "aliyun oss client for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coderhaoxin/oss-client.git"
+  },
+  "keywords": [
+    "aliyun",
+    "oss",
+    "node.js"
+  ],
+  "author": "haoxin",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "992c59467a64f7ffe0634a49a88876c4429f2a27"
+}
