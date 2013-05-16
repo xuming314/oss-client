@@ -2,7 +2,7 @@
   "name": "oss-client",
   "version": "0.0.0",
   "description": "aliyun oss client for node.js",
-  "main": "index.js",
+  "main": "oss.js",
   "scripts": {
     "test": "mocha"
   },
