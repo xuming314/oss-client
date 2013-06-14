@@ -1,7 +1,7 @@
 ### a node.js module to connect aliyun oss
 
 1.用例
-
+```js
 var ossApi = require('./oss_client');
 var option = {
     accessId: 'your access id'
@@ -19,8 +19,8 @@ oss.createBucket('yourbucketname', 'private', function (err) {
 oss.listBucket(function (err, list) {
     console.log(list['Buckets']['Bucket'][0]); 
 });
-
-2.Node.js Api说明(详细oss api功能说明请见oss官方网站)
+```
+2.Node.js Api说明
 
 用户定义回调函数
 err: 错误信息
