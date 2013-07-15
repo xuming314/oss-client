@@ -7,8 +7,8 @@ var request = require('request');
 var mime = require('mime');
 
 function OssClient (options) {
-  this._accessId = options.accessId;
-  this._accessKey = options.accessKey;
+  this._accessId = options.accessKeyId;
+  this._accessKey = options.accessKeySecret;
   this._host = "oss.aliyuncs.com";
   this._port = "8080";
   this._timeout = 30000000;

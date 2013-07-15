@@ -1,7 +1,7 @@
 var ossApi = require('../index');
 var option = {
-  accessId: '',
-  accessKey: ''
+  accessKeyId: '',
+  accessKeySecret: ''
 };
 
 var oss = new ossApi.OssClient(option);
