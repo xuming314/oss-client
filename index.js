@@ -149,20 +149,27 @@ OssClient.prototype.doRequest = function (method, metas, ossParams, callback) {
   }
 
   var req = request(options, function (error, response, body) {
-    if (error && callback) return callback(error);
-    if (response.statusCode != 200 && response.statusCode != 204) {
+    if (error) {
+      callback && callback(error);
+      return;
+    }
+    if (response.statusCode !== 200 && response.statusCode !== 204) {
       var e = new Error(body);
       e.code = response.statusCode;
-      if (callback) callback(e);
+      callback && callback(e);
     } else {
       // if we should write the body to a file, we will do it later
       if (body && !ossParams.dstFile) {
         var parser = new xml2js.Parser();
         parser.parseString(body, function(error, result) {
-          callback(error, result);
+          callback && callback(error, result);
         });
+      } else if (method == 'HEAD') {
+        callback && callback(error, response.headers);
       } else {
-        if (method == 'HEAD') callback(error, response.headers);
+        callback && callback(null, {
+          statusCode: response.statusCode
+        });
       }
     }
   });

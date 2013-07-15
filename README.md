@@ -4,8 +4,8 @@
 ```js
 var ossApi = require('oss-client');
 var option = {
-  accessId: 'your access id',
-  accessKey: 'your access key'
+  accessKeyId: 'your access key id',
+  accessKeySecret: 'your access key secret'
 };
 
 var oss = new ossApi.OssClient(option);
