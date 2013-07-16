@@ -1,7 +1,8 @@
-var fs = require('fs')
-var path = require('path')
-var util = require('util')
+var fs = require('fs');
+var path = require('path');
+var util = require('util');
 var crypto = require('crypto');
+
 var xml2js = require('xml2js');
 var request = require('request');
 var mime = require('mime');
@@ -13,7 +14,6 @@ function OssClient (options) {
   this._port = "8080";
   this._timeout = 30000000;
 };
-
 /**
  * get the Authorization header
  * "Authorization: OSS " + AccessId + ":" + base64(hmac-sha1(METHOD + "\n"
@@ -67,8 +67,8 @@ OssClient.prototype.getResource = function (ossParams){
 };
 
 OssClient.prototype.getUrl = function (ossParams) {
-  var url = 'http://' + this._host + ':' + this._port,
-    params = [];
+  var url = 'http://' + this._host + ':' + this._port;
+  var params = [];
 
   if (typeof ossParams['bucket'] === 'string') {
     url = url + '/' + ossParams['bucket'];
@@ -120,7 +120,7 @@ OssClient.prototype.getHeaders = function (method, metas, ossParams) {
     headers['content-type'] = "txt/xml";
   }
   if (ossParams.userMetas) {
-    metas = metas || {}
+    metas = metas || {};
     for (i in ossParams.userMetas) {
       metas[i] = ossParams.userMetas[i];
     }
@@ -260,7 +260,8 @@ OssClient.prototype.putObject = function (bucket, object, srcFile, /* userMetas,
     throw new Error('error arguments!');
   }
 
-  var that = this;
+  var self = this;
+  var thisArguments = arguments;
   fs.stat(srcFile, function(err, stats) {
     if (err) return callback(err);
 
@@ -273,10 +274,11 @@ OssClient.prototype.putObject = function (bucket, object, srcFile, /* userMetas,
 
     if (typeof arguments[3] == 'object') {
       ossParams.userMetas = arguments[3];
+      //js 无块作用域
+      var callback = thisArguments[thisArguments.length - 1];
     }
-    var callback = arguments[arguments.length-1];
 
-    that.doRequest(method, null, ossParams, callback);
+    self.doRequest(method, null, ossParams, callback);
   });
 };
 
