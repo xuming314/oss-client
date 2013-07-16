@@ -255,61 +255,62 @@ OssClient.prototype.setBucketAcl = function (bucket, acl, callback) {
 /*********************/
 /** object operater **/
 /*********************/
-OssClient.prototype.putObject = function (bucket, object, srcFile, /* userMetas,*/ callback) {
-  if (!bucket || !object || !srcFile) {
+OssClient.prototype.putObject = function (option, callback) {
+  /*
+  * option: {
+  *   bucket:,
+  *   object:,
+  *   srcFile:,
+  *   userMetas:
+  * }
+  */
+  if (!option || !option.bucket || !option.object || !option.srcFile) {
     throw new Error('error arguments!');
   }
 
   var self = this;
   var thisArguments = arguments;
-  fs.stat(srcFile, function(err, stats) {
+  fs.stat(option.srcFile, function(err, stats) {
     if (err) return callback(err);
 
     var method = 'PUT';
-    var ossParams = {
-      bucket: bucket,
-      object: object,
-      srcFile: srcFile
-    };
 
-    if (typeof arguments[3] == 'object') {
-      ossParams.userMetas = arguments[3];
-      //js 无块作用域
-      var callback = thisArguments[thisArguments.length - 1];
-    }
-
-    self.doRequest(method, null, ossParams, callback);
+    self.doRequest(method, null, option, callback);
   });
 };
 
-OssClient.prototype.copyObject = function (bucket, dstObject, srcObject, callback) {
-  if (!bucket || !dstObject || !srcObject) {
+OssClient.prototype.copyObject = function (option, callback) {
+  /*
+  * option: {
+  *   bucket:,
+  *   object:,
+  *   srcObject:
+  * }
+  */
+  if (!option || !option.bucket || !option.object || !option.srcObject) {
     throw new Error('error arguments!');
   }
 
   var method = 'PUT';
-  var ossParams = {
-    bucket: bucket,
-    object: dstObject
-  };
+  var metas = { 'x-oss-copy-source': '/' + option.bucket + '/' + option.srcObject };
 
-  var metas = { 'x-oss-copy-source': '/' + bucket + '/' + srcObject };
-
-  this.doRequest(method, metas, ossParams, callback);
+  this.doRequest(method, metas, option, callback);
 };
 
-OssClient.prototype.deleteObject = function (bucket, object, callback) {
-  if (!bucket || !object) {
+OssClient.prototype.deleteObject = function (option, callback) {
+  /*
+  * option: {
+  *   bucket,
+  *   object
+  * }
+  */
+  if (!option || !option.bucket || !option.object) {
     throw new Error('error arguments!');
   }
 
   var method = 'DELETE';
-  var ossParams = {
-    bucket: bucket,
-    object: object
-  };
 
-  this.doRequest(method, null, ossParams, callback);
+  this.doRequest(method, null, option, callback);
 };
 
 OssClient.prototype.getObject = function (bucket, object, dstFile, /* userHeaders , */ callback) {
