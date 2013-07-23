@@ -12,38 +12,38 @@ var oss = new ossApi.OssClient(option);
 ```
 
 列出所有bucket
-```
+```js
 listBucket(callback(err){})
 ```
 
 创建bucket
-```
+```js
 bucket: bucket名
 acl:bucket访问规则
 createBucket(bucket, acl, callback(err){})
 ```
 
 删除bucket
-```
+```js
 bucket: bucket名
 deleteBucket(bucket, callback(err){})
 ```
 
 获取bucket访问规则
-```
+```js
 bucket: bucket名
 getBucketAcl(bucket, callback(err, result){})
 ```
 
 设置bucket访问规则
-```
+```js
 bucket: bucket名
 acl: bucket访问规则
 setBucketAcl（bucket, acl, callback(err){})
 ```
 
 创建object
-```
+```js
 bucket: bucket名
 object: object名
 srcFile: 上传的文件路径
@@ -52,22 +52,29 @@ putObject(bucket, object, srcFile, /* userMetas, */ callback(err) {})
 ```
 
 复制object
-```
+```js
 bucket: bucket名
 dstObject: 目标object名
 srcObject: 源object名
-copyObject(bucket, dstObject, srcObject, callback(err) {})
+copyObject({
+  bucket: bucket,
+  object: object,
+  srcObject: srcObject
+}, callback(err) {})
 ```
 
 删除object
-```
+```js
 bucket: bucket名
 object: object名
-deleteObject(bucket, object, callback(err) {})
+deleteObject({
+  bucket: bucket,
+  object: object
+}, callback(err) {})
 ```
 
 获取object
-```
+```js
 bucket: bucket名
 object: object名
 dstFile: 保存object的文件路径
@@ -76,14 +83,14 @@ getObject(bucket, object, dstFile, /* userHeaders , */ callback(err) {})
 ```
 
 获取object头信息
-```
+```js
 bucket: bucket名
 object: object名
 headObject(bucket, object, callback(err, result) {})
 ```
 
 获取object列表
-```
+```js
 bucket: bucket名
 prefix: 可选，object 前缀
 marker: 可选，列表起始object
@@ -93,7 +100,7 @@ listObject(bucket /*, prefix, marker, delimiter, maxKeys */, callback(err, resul
 ```
 
 创建object group
-```
+```js
 bucket: bucket名
 objectGroup: objectGroup名
 objectArray: array 类型， 组成object group的object列表
@@ -101,7 +108,7 @@ createObjectGroup(bucket, objectGroup, objectArray, callback(err) {})
 ```
 
 获取object group
-```
+```js
 bucket: bucket名
 objectGroup: objectGroup名
 dstFile: 保存object group 的文件路径
@@ -109,21 +116,21 @@ getObjectGroup(bucket, objectGroup, dstFile, callback(err) {})
 ```
 
 获取object group index
-```
+```js
 bucket: bucket名
 objectGroup: objectGroup名
 getObjectGroupIndex(bucket, objectGroup, callback(err, result) {})
 ```
 
 获取object group 头信息
-```
+```js
 bucket: bucket名
 objectGroup: objectGroup名
 headObjectGroup(bucket, objectGroup, callback(err, result) {})
 ```
 
 删除object group
-```
+```js
 bucket: bucket名
 objectGroup: objectGroup名
 deleteObjectGroup(bucket, objectGroup, callback(err) {})
