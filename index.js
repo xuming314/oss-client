@@ -273,6 +273,7 @@ OssClient.prototype.putObject = function (option, callback) {
     });
   } else {
     // upload by buffer or stream
+    if (option.srcFile.length<=0) return callback(new Error('Argument error, srcFile is empty.'));
     self.doRequest('PUT', null, option, callback);
   }
 };
